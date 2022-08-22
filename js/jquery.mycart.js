@@ -192,7 +192,7 @@
         '</div>' +
         '<div class="modal-footer">' +
         '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
-
+          '<button type="button" class="btn btn-default"><a href="payment.html" ><i aria-hidden="true"></i>Bayar</a></button>' +
         '</div>' +
         '</div>' +
         '</div>' +
