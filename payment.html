@@ -136,15 +136,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
 
         <div class="logo">
-            <h1 ><a href="index.html"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
+            <h1 ><a href="index.html"><b>K<br>U<br>Y </b> Warung Kita<span>The Best Warung In Town</span></a></h1>
         </div>
         <div class="head-t">
             <ul class="card">
                 <li><a href="wishlist.html" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
                 <li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
                 <li><a href="register.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
-                <li><a href="about.html" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
-                <li><a href="shipping.html" ><i class="fa fa-ship" aria-hidden="true"></i>Shipping</a></li>
+                <li><a href="histori.html" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
+                <li><a href="seller.html" ><i class="fa fa-ship" aria-hidden="true"></i>Open Shop</a></li>
             </ul>
         </div>
 
@@ -173,10 +173,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                     <ul class="nav navbar-nav ">
-                        <li ><a href="index.html" class="hyper "><span>Home</span></a></li>
+                        <li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>
 
-                        <li  class="dropdown ">
-                            <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
+                        <li class="dropdown ">
+                            <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Sembako<b class="caret"></b></span></a>
                             <ul class="dropdown-menu multi">
                                 <div class="row">
                                     <div class="col-sm-3">
@@ -221,7 +221,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
                         <li class="dropdown">
 
-                            <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Personal Care <b class="caret"></b></span></a>
+                            <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Kebutuhan Pribadi <b class="caret"></b></span></a>
                             <ul class="dropdown-menu multi multi1">
                                 <div class="row">
                                     <div class="col-sm-3">
@@ -263,7 +263,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Household<b class="caret"></b></span></a>
+                            <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Peralatan Rumah Tangga<b class="caret"></b></span></a>
                             <ul class="dropdown-menu multi multi2">
                                 <div class="row">
                                     <div class="col-sm-3">
@@ -305,13 +305,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </ul>
                         </li>
 
-                        <li><a href="codes.html" class="hyper"> <span>Codes</span></a></li>
                         <li><a href="contact.html" class="hyper"><span>Contact Us</span></a></li>
                     </ul>
                 </div>
             </nav>
             <div class="cart" >
-
                 <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
             </div>
             <div class="clearfix"></div>
@@ -359,13 +357,84 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <div class="col-12">
-                <div class="btn btn-primary mb-3">
-                    <span class="ps-3">Pay $243</span>
-                    <span class="fas fa-arrow-right"></span>
+
+                <div class="btn btn-primary mb-3" >
+                    <button class="btn btn-primary mb-3" >
+                        <a class="btn btn-primary mb-3" href="histori.html">PAY
+                            <i class="ps-3" aria-hidden="true"></i>
+                        </a>
+                    </button>
+<!--<button>-->
+<!--    <a href="histori.html"></a>-->
+<!--    <span class="ps-3">Pay $243</span>-->
+<!--    <span class="fas fa-arrow-right"></span>-->
+<!--</button>-->
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 </body>
+<script type="text/javascript">
+<!-- //footer-->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear'
+			};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<script type='text/javascript' src="js/jquery.mycart.js"></script>
+<script type="text/javascript">
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      affixCartIcon: true,
+      checkoutCart: function(products) {
+        $.each(products, function(){
+          console.log(this);
+        });
+      },
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      getDiscountPrice: function(products) {
+        var total = 0;
+        $.each(products, function(){
+          total += this.quantity * this.price;
+        });
+        return total * 1;
+      }
+    });
+
+  });
+  </script>
 </html>

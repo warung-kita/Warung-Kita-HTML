@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Warung Kita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' />
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container bootstrap snippets bootdey">
+    <div>
+        <br><br>
+        <br><br>
+    </div>
+    <div class="container">
+
+        <div class="logo text-center">
+            <h1 ><a href="index.html"><b>K<br>U<br>Y </b> Warung Kita<span>The Best Warung In Town</span></a></h1>
+        </div>
+        <div class="head-t text-center">
+            <ul class="card">
+                <li><a href="wishlist.html" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
+                <li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Profil</a></li>
+                <li><a href="about.html" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
+                <li><a href="seller.html" ><i class="fa fa-ship" aria-hidden="true"></i>Open Shop</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-top">
+            <div class="cart" >
+
+                <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+    <div>
+        <br><br>
+    </div>
+    <div class="row">
+        <div class="profile-nav col-md-3">
+            <div class="panel">
+                <div class="user-heading round">
+                    <a href="#">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                    </a>
+                    <h1>RatnaDewi</h1>
+                </div>
+
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
+                    <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
+                    <li><a href="#"> <i class="fa fa-calendar "></i> Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="profile-info col-md-9">
+
+            <div class="panel">
+                <div class="panel-body bio-graph-info">
+                    <h1>Detail Account</h1>
+                    <div class="row">
+                        <div class="bio-row">
+                            <p><span>Full Name </span>: Ratna Dewi</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Username </span>: RatnaDewi</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Alamat </span>: Jogja</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Email </span>: RatnaDewi@gmail.com</p>
+                        </div>
+                        <div class="bio-row">
+                            <p><span>Hp </span>: 0855794685</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+<!-- //footer-->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear'
+			};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<script type='text/javascript' src="js/jquery.mycart.js"></script>
+<script type="text/javascript">
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      affixCartIcon: true,
+      checkoutCart: function(products) {
+        $.each(products, function(){
+          console.log(this);
+        });
+      },
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      getDiscountPrice: function(products) {
+        var total = 0;
+        $.each(products, function(){
+          total += this.quantity * this.price;
+        });
+        return total * 1;
+      }
+    });
+
+  });
+  </script>
+</script>
+</body>
+</html>
